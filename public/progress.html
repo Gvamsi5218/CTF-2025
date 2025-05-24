@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberLearn | Progress</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-blue-900">
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">CyberLearn</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lms.html">LMS</a></li>
+        <li><a href="ctf.html">CTF Portal</a></li>
+        <li><a href="gamified.html">Gamified Learning</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="career.html">Career</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="progress-page">
+    <h2 class="text-4xl font-orbitron text-white">Quantum Constellation</h2>
+    <p class="my-4 text-gray-300">Track your learning journey in real-time.</p>
+    <div class="grid grid-cols-12 gap-4 my-8">
+      <div class="col-span-4 p-6 bg-gray-800 rounded-lg shadow-neon transform hover:rotate-12 transition">
+        <h3 class="text-xl font-orbitron text-white">Cryptography</h3>
+        <p class="text-gray-300">Progress: <span id="crypto-progress">0</span>%</p>
+        <button onclick="updateProgress('crypto')" class="btn mt-4">Update</button>
+      </div>
+      <div class="col-span-4 p-6 bg-gray-800 rounded-lg shadow-neon transform hover:rotate-12 transition">
+        <h3 class="text-xl font-orbitron text-white">Networking</h3>
+        <p class="text-gray-300">Progress: <span id="network-progress">0</span>%</p>
+        <button onclick="updateProgress('network')" class="btn mt-4">Update</button>
+      </div>
+      <div class="col-span-4 p-6 bg-gray-800 rounded-lg shadow-neon">
+        <h3 class="text-xl font-orbitron text-white">Skill Heatmap</h3>
+        <div id="heatmap" class="w-32 h-8 mx-auto rounded-lg bg-red-500"></div>
+      </div>
+    </div>
+    <p class="text-gray-300">Career Predictor: <span id="career-predictor">Keep learning</span></p>
+    <p class="text-gray-300">Mentor Feedback: <span id="mentor-tip">Keep practicing!</span></p>
+    <p class="text-gray-300">Wearable Sync: <span id="wearable-status">Notifications Off</span></p>
+    <div class="my-8 p-6 bg-gray-800 rounded-lg shadow-neon">
+      <h3 class="text-xl font-orbitron text-white">Peer Duel</h3>
+      <button onclick="addPoints(20)" class="btn">Challenge Friend</button>
+    </div>
+    <div class="flex justify-center space-x-4 mt-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAh0lEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEHQDihUnp8NelnIAAAAAElFTkSuQmCC" alt="(ISC)² Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAh0lEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEHQDihUnp8NelnIAAAAAElFTkSuQmCC" alt="ISACA Logo" class="h-10">
+    </div>
+  </main>
+
+  <footer>
+    <p class="text-gray-300">© 2025 CyberLearn. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 my-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR4nO3WsQnAMBAF0f6X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CyberLearn Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAh0lEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEHQDihUnp8NelnIAAAAAElFTkSuQmCC" alt="CEH Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjUlEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CompTIA Logo" class="h-10">
+    </div>
+  </footer>
+</body>
+</html>

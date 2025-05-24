@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberLearn | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-blue-900">
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">CyberLearn</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lms.html">LMS</a></li>
+        <li><a href="ctf.html">CTF Portal</a></li>
+        <li><a href="gamified.html">Gamified Learning</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="career.html">Career</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h2 class="text-4xl font-orbitron animate-pulse text-white">Master Cybersecurity with CyberLearn</h2>
+    <p class="my-4 text-gray-300">Dive into hands-on challenges, real-world attacks, and gamified learning paths.</p>
+    <div class="flex justify-center space-x-4 my-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR4nO3WsQnAMBAF0f6X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CyberLearn Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAh0lEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEHQDihUnp8NelnIAAAAAElFTkSuQmCC" alt="CEH Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjUlEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CompTIA Logo" class="h-10">
+    </div>
+    <video autoplay loop muted class="w-64 mx-auto my-4 rounded-lg shadow-neon">
+      <source src="https://via.placeholder.com/640x360.mp4?text=Welcome" type="video/mp4">
+    </video>
+    <div class="grid grid-cols-12 gap-4 my-8">
+      <div class="col-span-6 p-6 bg-gray-800 rounded-lg shadow-neon animate-fade-in">
+        <h3 class="text-2xl font-orbitron text-white">Threat Simulator</h3>
+        <p id="threat-data" class="my-2 text-gray-300">Loading threats...</p>
+        <button onclick="refreshThreats()" class="btn">Refresh Threats</button>
+      </div>
+      <div class="col-span-6 p-6 bg-gray-800 rounded-lg shadow-neon animate-fade-in">
+        <h3 class="text-2xl font-orbitron text-white">AI Onboarding Quiz</h3>
+        <select id="role-select" class="mt-4 p-2 bg-gray-700 text-white rounded-lg w-full" onchange="updateRole()">
+          <option value="">Select Role</option>
+          <option value="hacker">Hacker</option>
+          <option value="defender">Defender</option>
+        </select>
+        <p id="role-display" class="mt-2 text-gray-300">Role: None</p>
+      </div>
+      <div class="col-span-12 p-6 bg-gray-800 rounded-lg shadow-neon animate-fade-in">
+        <h3 class="text-2xl font-orbitron text-white">Hack Challenge</h3>
+        <div id="drop-zone" class="h-24 bg-gray-700 rounded-lg flex items-center justify-center mt-4" style="border: 2px dashed #00D4FF;" ondragover="event.preventDefault()" ondrop="handleDrop()">
+          <div draggable="true" ondragstart="event.dataTransfer.setData('text', 'puzzle')" class="px-6 py-2 bg-neon-pink text-black rounded-lg cursor-move">Drag Me</div>
+        </div>
+      </div>
+    </div>
+    <button onclick="toggleHighContrast()" class="btn">Toggle High Contrast</button>
+    <a href="lms.html" class="btn mt-4">Start Learning</a>
+  </section>
+
+  <footer>
+    <p class="text-gray-300">© 2025 CyberLearn. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 my-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR4nO3WsQnAMBAF0f6X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CyberLearn Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAh0lEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEHQDihUnp8NelnIAAAAAElFTkSuQmCC" alt="CEH Logo" class="h-10">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjUlEQVR4nO3WsQnAMBAF0X2X2S0EJSV0cR0E7e5uZhMhQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB0B4q5J6fDXo5yAAAAAElFTkSuQmCC" alt="CompTIA Logo" class="h-10">
+    </div>
+  </footer>
+</body>
+</html>

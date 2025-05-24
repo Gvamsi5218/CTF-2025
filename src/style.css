@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter&display=swap');
+
+/* Custom styles for cyberpunk aesthetic */
+:root {
+  --neon-blue: #00D4FF;
+  --neon-pink: #FF2E63;
+}
+
+body {
+  @apply font-inter text-gray-300;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in;
+}
+
+.navbar {
+  @apply bg-black bg-opacity-70 p-4 flex justify-between items-center sticky top-0 z-10 max-w-6xl mx-auto;
+}
+
+.logo {
+  @apply text-2xl font-orbitron text-neon-blue;
+}
+
+.nav-links {
+  @apply flex space-x-4;
+}
+
+.nav-links a {
+  @apply text-gray-300 hover:text-neon-blue transition;
+}
+
+.hero, .lms-page, .ctf-page, .gamified-page, .progress-page, .community-page, .career-page {
+  @apply max-w-6xl mx-auto p-4;
+}
+
+h2 {
+  @apply text-neon-blue animate-pulse;
+}
+
+.btn {
+  @apply px-4 py-2 bg-neon-pink text-black font-bold rounded-lg hover:bg-neon-blue hover:text-white transition shadow-neon;
+}
+
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
+}
+
+footer {
+  @apply bg-black bg-opacity-70 p-4 text-center mt-8;
+}
